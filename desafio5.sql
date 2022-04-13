@@ -1,0 +1,2 @@
+SELECT c.nome_cancao AS 'cancao', COUNT(hp.usuario_id) AS 'reproducoes' FROM SpotifyClone.cancoes AS c
+INNER JOIN SpotifyClone.historico_reproducao AS hp ON c.cancao_id = hp.cancao_id GROUP BY c.nome_cancao ORDER BY `reproducoes` DESC,c.nome_cancao LIMIT 2 ;
