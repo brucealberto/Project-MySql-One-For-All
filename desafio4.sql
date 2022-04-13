@@ -1,0 +1,2 @@
+SELECT us.nome_usuario AS 'usuario', IF (YEAR(MAX(hp.data_reproducao)) = '2021','Usuário ativo','Usuário inativo')  AS 'condicao_usuario' FROM SpotifyClone.usuario AS us
+INNER JOIN SpotifyClone.historico_reproducao AS hp ON us.usuario_id = hp.usuario_id GROUP BY us.nome_usuario;
