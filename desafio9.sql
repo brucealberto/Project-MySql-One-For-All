@@ -1,0 +1,2 @@
+SELECT COUNT(us.usuario_id) AS 'quantidade_musicas_no_historico' FROM SpotifyClone.historico_reproducao AS hp
+INNER JOIN SpotifyClone.usuario AS us ON hp.usuario_id = us.usuario_id WHERE us.nome_usuario = 'Bill';
